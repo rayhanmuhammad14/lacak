@@ -21,7 +21,7 @@ def index():
     </head>
     <body>
         <h3>Klik Tombol Dibawah Untuk Melakukan Percobaan</h3>
-        <button onclick="getLocation()">Gasss Abangku</button>
+        <button onclick="getLocation()">Gasss Abangku   </button>
         <p id="status"></p>
 
         <script>
