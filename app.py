@@ -16,7 +16,7 @@ def index():
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Tracking Lokasi</title>
+        <title>433</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
@@ -68,7 +68,7 @@ def log_location():
     }
 
     log_collection.insert_one(log_entry)
-    return "✅ Lokasi berhasil disimpan!"
+    return "Berhasil Thanks Bestiee"
 
 if __name__ == "__main__":
     app.run("0.0.0.0", port=5000, debug=True)
